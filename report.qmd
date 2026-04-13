@@ -88,4 +88,5 @@ clean_data %>%
 
 
 ## Results:
+
 Figure 2 illustrates the relationship between marketing expenditure and purchase amounts. The plot indicates a positive association between the two variables, suggesting that customers who receive higher marketing investment tend to generate greater purchase volumes. The inclusion of a regression line further confirms a linear relationship, indicating that purchase amounts generally increase in tandem with marketing spend.
