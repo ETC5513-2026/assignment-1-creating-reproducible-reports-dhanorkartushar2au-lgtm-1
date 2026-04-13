@@ -1,0 +1,91 @@
+---
+title: "Marketing Spend Analysis"
+author: "Tushar Dhanorkar (36367761)"
+format: 
+      html: default
+      pdf: 
+          documentclass: article
+editor: visual
+---
+
+## Introduction
+
+This report examines the correlation between marketing expenditure and consumer purchasing behavior. Utilizing a dataset comprised of customer-level metrics—including spend, purchase totals, visit frequency, and segmentation—this analysis seeks to evaluate marketing efficiency. The primary objective is to determine the extent to which increased marketing investment drives higher purchase volumes, thereby informing data-driven decision-making.
+
+
+## Research Question:
+
+Does an increase in marketing expenditure per customer correlate with higher purchase volumes? This report aims to evaluate whether strategic marketing investments result in a significant rise in customer purchasing activity
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+ 
+library(tidyverse)
+data <- read_csv("data/36367761_Tushar_Dhanorkar.csv")
+
+clean_data <-  data %>% 
+  drop_na(marketing_spend,purchase_amount)
+```
+
+## Dataset Introduction:
+The dataset consists of customer-level observations, including variables such as marketing expenditure, purchase totals, visit frequency, and customer segmentation. To ensure data integrity, the dataset was refined by removing records with missing values (N/A) in the 'marketing_spend' and 'purchase_amount' columns, as these are the primary variables for our subsequent calculations.
+
+This Dataset contains `r nrow(clean_data)` observations and `r ncol(clean_data)` variables
+
+
+Calculating average marketing and average purchase amount for all customers
+
+```{r}
+#| echo: false
+
+clean_data %>% 
+  summarise(
+    avg_marketing_spend =mean(marketing_spend),
+    avg_purchase_amount= mean(purchase_amount)
+  )
+```
+These summary statistics provide a general overview of customer spending behaviour and marketing investment levels.
+
+
+## Histogram: Distribution of Marketing Spend
+
+We began by analyzing the distribution of marketing expenditure to identify the frequency of various spending levels. This step provides essential insights into how marketing resources are allocated across the customer base.
+
+```{r}
+#|fig-cap: "Figure 1: Distribution of Marketing Spend"
+
+
+clean_data %>% 
+  ggplot(aes(x=marketing_spend))+
+  geom_histogram(bins=30)+
+  labs(
+     x = "Marketing Spend",
+     y = "Frequency",
+    title = "Distribution of Marketing Spend"
+     )
+```
+
+## Main Graph: Marketing Spend vs Purchase Amount
+
+```{r}
+#|fig-cap: "Figure 2: Marketing Spend vs Purchase Amount"
+
+clean_data %>% 
+  ggplot(aes(x = marketing_spend, y = purchase_amount)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    x = "Marketing Spend",
+    y = "Purchase Amount",
+    title = "Relationship between Marketing Spend and Purchase Amount"
+  )+
+  theme_minimal()
+```
+
+
+
+## Results:
+Figure 2 illustrates the relationship between marketing expenditure and purchase amounts. The plot indicates a positive association between the two variables, suggesting that customers who receive higher marketing investment tend to generate greater purchase volumes. The inclusion of a regression line further confirms a linear relationship, indicating that purchase amounts generally increase in tandem with marketing spend.

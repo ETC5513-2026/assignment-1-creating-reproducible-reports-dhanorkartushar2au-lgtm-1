@@ -1,0 +1,54 @@
+---
+title: "Appendix"
+format: pdf
+---
+
+## Use of Generative AI
+
+Generative AI tools (ChatGPT and Google Gemini) were used in this assignment in a limited and appropriate manner. Their use was restricted to grammar correction, improving the clarity of written statements, and resolving minor GitHub-related issues during the setup of the repository.
+
+## GitHub Issue Resolution
+
+During the assignment, an issue was encountered while committing and pushing changes to GitHub. Initially, the push was unsuccessful despite providing the correct username and credentials.
+
+To resolve this issue, troubleshooting steps were followed, including installing the required Git-related dependencies through the console. After completing these steps, the issue was successfully resolved, and changes were committed and pushed to the repository.
+
+### Supporting Screenshots
+
+![](images/clipboard-841314884.png)
+
+![](images/clipboard-2463161870.png)
+
+![](images/clipboard-3821637731.png)
+
+ChatGPT conversation:\
+<https://chatgpt.com/share/69dc5eec-b674-8321-a4c1-870fc45df759>
+
+## Use of AI for Writing Support
+
+ChatGPT and Google Gemini were used to refine grammar and enhance the clarity of the written content. No AI tools were used to generate the core analysis, code, or results presented in this report.
+
+### Supporting Screenshots
+
+![](images/clipboard-184002283.png)
+
+![](images/clipboard-109353792.png)
+
+![](images/clipboard-3365703900.png)
+
+![](images/clipboard-163468851.png)
+
+![](images/clipboard-3700927408.png)
+
+![](images/clipboard-1320093469.png)
+
+Google Gemini:\
+<https://gemini.google.com/share/bf79c0481528>
+
+## References
+
+ChatGPT conversation:\
+<https://chatgpt.com/share/69dc5eec-b674-8321-a4c1-870fc45df759>
+
+Google Gemini:\
+<https://gemini.google.com/share/bf79c0481528>
